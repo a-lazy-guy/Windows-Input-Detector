@@ -27,8 +27,21 @@ class KeyboardDetector:
             return key.name
 
         numpad_map = {
+            # 小键盘数字键
             '<96>': 'Num0', '<97>': 'Num1', '<98>': 'Num2', '<99>': 'Num3', '<100>': 'Num4',
-            '<101>': 'Num5', '<102>': 'Num6', '<103>': 'Num7', '<104>': 'Num8', '<105>': 'Num9'
+            '<101>': 'Num5', '<102>': 'Num6', '<103>': 'Num7', '<104>': 'Num8', '<105>': 'Num9',
+            # 小键盘功能键
+            '<106>': 'NumMultiply', '<107>': 'NumAdd', '<108>': 'NumSeparator', '<109>': 'NumSubtract',
+            '<110>': 'NumDecimal', '<111>': 'NumDivide',
+            # 基本功能键
+            '<9>': 'Tab', '<13>': 'Enter', '<27>': 'Escape', '<32>': 'Space',
+            # 修饰键
+            '<16>': 'Shift', '<17>': 'Control', '<18>': 'Alt', '<20>': 'CapsLock',
+            # 导航键
+            '<33>': 'PageUp', '<34>': 'PageDown', '<35>': 'End', '<36>': 'Home',
+            '<37>': 'Left', '<38>': 'Up', '<39>': 'Right', '<40>': 'Down',
+            # 编辑键
+            '<45>': 'Insert', '<46>': 'Delete'
         }
         if key_str in numpad_map:
             return numpad_map[key_str]
